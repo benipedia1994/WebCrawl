@@ -11,14 +11,12 @@ import java.util.*;
 
 public class Crawl {
 
-    public static void main(String[] args){
+    public static void crawl(String inputURL){
         Queue<String> toSearch = new LinkedList<String>();
         HashSet<String> searched = new HashSet<>();
         HashSet<String> linkList = new HashSet<>();
 
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Input root URL to crawl from");
-        String inputURL = reader.nextLine();
+
         toSearch.add(inputURL);
         linkList.add(inputURL);
 
