@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3036d874-9869-42fa-b515-0fbf9ddba55f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CrawlThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.sql" beforeDir="false" afterPath="$PROJECT_DIR$/links.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/Crawl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/Crawl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Crawl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Crawl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
