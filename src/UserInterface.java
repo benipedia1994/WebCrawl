@@ -13,6 +13,8 @@ public class UserInterface extends JFrame {
         JTextField inputURL = new JTextField("input URL here",40);
         inputURL.setName("UrlTextField");
 
+        JLabel pagesIndicator = new JLabel("Pages Crawled: " +"0");
+
         JButton button = new JButton("Crawl");
         button.addActionListener(new ActionListener() {
             @Override
@@ -21,7 +23,7 @@ public class UserInterface extends JFrame {
             }
         });
         //button.setBounds( 50,10);
-        JLabel pagesIndicator = new JLabel("Pages Crawled: " + pagesCrawled);
+
 
 
         JPanel panel = new JPanel();
