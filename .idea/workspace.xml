@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3036d874-9869-42fa-b515-0fbf9ddba55f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CrawlThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IOThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SearchFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/webCrawl/Crawl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/Crawl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links.sql" beforeDir="false" afterPath="$PROJECT_DIR$/links.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webCrawl/CrawlThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/CrawlThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrawlThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrawlThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,28 +34,31 @@
   </component>
   <component name="ProjectId" id="1TS2QgFViAMNr6NDwRGSKYw5FKC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MapWebsite" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Crawl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -83,6 +90,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -93,8 +112,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564025724114</updated>
+      <workItem from="1576797190426" duration="770000" />
+      <workItem from="1577423712631" duration="567000" />
+      <workItem from="1577565830351" duration="1221000" />
+      <workItem from="1582655577992" duration="5138000" />
+      <workItem from="1582662537619" duration="22423000" />
+      <workItem from="1582835846804" duration="8629000" />
+      <workItem from="1582866294561" duration="10699000" />
+      <workItem from="1582924782559" duration="7810000" />
+      <workItem from="1582948126453" duration="904000" />
+      <workItem from="1582949991597" duration="2261000" />
+      <workItem from="1582955453920" duration="888000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -109,82 +142,70 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state x="773" y="267" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1582870329941">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="773" y="267" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1582870329941" />
+    <state x="659" y="472" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576797277481">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="659" y="472" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576797277481" />
+    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582668555956">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1582668555956" />
+    <state width="1354" height="260" key="GridCell.Tab.0.bottom" timestamp="1582956200872">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="260" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
+    <state width="1354" height="260" key="GridCell.Tab.0.center" timestamp="1582956200872">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="260" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
+    <state width="1354" height="260" key="GridCell.Tab.0.left" timestamp="1582956200871">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="260" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200871" />
+    <state width="1354" height="260" key="GridCell.Tab.0.right" timestamp="1582956200872">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="260" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
+    <state width="1354" height="321" key="GridCell.Tab.1.bottom" timestamp="1576047404256">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="321" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576047404256" />
+    <state width="1354" height="321" key="GridCell.Tab.1.center" timestamp="1576047404254">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="321" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576047404254" />
+    <state width="1354" height="321" key="GridCell.Tab.1.left" timestamp="1576047404253">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="321" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576047404253" />
+    <state width="1354" height="321" key="GridCell.Tab.1.right" timestamp="1576047404255">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1354" height="321" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576047404255" />
+    <state x="482" y="188" width="1024" height="845" key="SettingsEditor" timestamp="1575959145677">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="188" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1575959145677" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582955455010">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1582955455010" />
+    <state x="302" y="155" width="1372" height="796" key="new project wizard" timestamp="1577567047087">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="302" y="155" width="1372" height="796" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1577567047087" />
+    <state x="680" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1582759554767">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="680" y="401" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1582759554767" />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>webCrawl</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>org.jsoup:jsoup:1.12.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
