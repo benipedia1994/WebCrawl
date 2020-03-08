@@ -7,18 +7,23 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class UserInterface extends JFrame {
     volatile HashSet<String> searched;
     volatile HashSet<String> toSearchHash;
+    AtomicBoolean stopCrawling;
+
+
     public UserInterface(){
 
 
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 200);
-        int pagesCrawled = 0;
+        setSize(600, 400);
+
+
         JPanel panel = new JPanel();
         setTitle("WebCrawlerWindow");
 
@@ -30,12 +35,15 @@ public class UserInterface extends JFrame {
         JComboBox threads = new JComboBox<Integer>(numbers);
         threads.setSelectedIndex(0);
 
+        stopCrawling = new AtomicBoolean(false);
 
 
 
 
 
 
+        JLabel numberCrawledText = new JLabel();
+        numberCrawledText.setText("Pages crawled: " +0);
         JButton crawlButton = new JButton("Crawl");
         crawlButton.addActionListener(new ActionListener() {
             @Override
@@ -47,9 +55,11 @@ public class UserInterface extends JFrame {
                 Connection conn = null;
                 PreparedStatement stmt = null;
                 Object lock1 = new Object();
+                stopCrawling.set(false);
 
                 toSearch.add(inputURL.getText());
                 toSearchHash.add(inputURL.getText());
+
 
 
                 try {
@@ -63,7 +73,7 @@ public class UserInterface extends JFrame {
                 int numberOfThreads = (Integer) threads.getSelectedItem();
                 for (int i = 0; i < numberOfThreads; i++) {
 
-                        Thread crawlThread = new Thread(new CrawlThread(toSearch, searched, conn, stmt, i + 1, toSearchHash,lock1),
+                        Thread crawlThread = new Thread(new CrawlThread(toSearch, searched, conn, stmt, i + 1, toSearchHash,lock1,stopCrawling,numberCrawledText),
                                 "Thread" + i);
                         crawlThread.start();
 
@@ -73,6 +83,14 @@ public class UserInterface extends JFrame {
 
 
         });
+        JButton stopButton = new JButton("Stop Crawling");
+        stopButton.addActionListener(new ActionListener() {
+                                         @Override
+                                         public void actionPerformed(ActionEvent actionEvent) {
+                                             stopCrawling.set(true);
+                                         }
+                                     }
+        );
         JTextField inputKeyWord = new JTextField("input key word",40);
 
 
@@ -105,7 +123,11 @@ public class UserInterface extends JFrame {
                     }
                     String [] columnNames = {"Link","Title","Ranking"};
                     JTable jtable = new JTable(data, columnNames);
+                    jtable.getColumnModel().getColumn(0).setPreferredWidth(250);
+                    jtable.getColumnModel().getColumn(1).setPreferredWidth(250);
                     panel.add(jtable);
+                    repaint();
+                    revalidate();
                     for( int i = 0; i < 10; i++){
                         System.out.println(linkObjects.get(i).getTitle()+linkObjects.get(i).getRanking());
                     }
@@ -128,10 +150,11 @@ public class UserInterface extends JFrame {
         panel.add(inputURL);
         panel.add(threads);
         panel.add(crawlButton);
+        panel.add(numberCrawledText);
+        panel.add(stopButton);
         //panel.add(pagesIndicator);
         panel.add(inputKeyWord);
         panel.add(searchButton);
-
         add(panel);
 
         setVisible(true);

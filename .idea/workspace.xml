@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3036d874-9869-42fa-b515-0fbf9ddba55f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/IOThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LinkObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SearchFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.sql" beforeDir="false" afterPath="$PROJECT_DIR$/links.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/CrawlThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/CrawlThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webCrawl/IOThread.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webCrawl/UserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webCrawl/getHTML.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrawlThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrawlThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getHTML.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MapWebsite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -123,6 +123,11 @@
       <workItem from="1582948126453" duration="904000" />
       <workItem from="1582949991597" duration="2261000" />
       <workItem from="1582955453920" duration="888000" />
+      <workItem from="1583048780880" duration="694000" />
+      <workItem from="1583295737740" duration="527000" />
+      <workItem from="1583510573350" duration="951000" />
+      <workItem from="1583512102639" duration="6363000" />
+      <workItem from="1583603887646" duration="3716000" />
     </task>
     <servers />
   </component>
@@ -151,26 +156,26 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="659" y="472" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576797277481" />
-    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582668555956">
+    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583296260347">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1582668555956" />
-    <state width="1354" height="260" key="GridCell.Tab.0.bottom" timestamp="1582956200872">
+    <state x="776" y="311" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1583296260347" />
+    <state width="1354" height="247" key="GridCell.Tab.0.bottom" timestamp="1583607958281">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1354" height="260" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
-    <state width="1354" height="260" key="GridCell.Tab.0.center" timestamp="1582956200872">
+    <state width="1354" height="247" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1583607958281" />
+    <state width="1354" height="247" key="GridCell.Tab.0.center" timestamp="1583607958280">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1354" height="260" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
-    <state width="1354" height="260" key="GridCell.Tab.0.left" timestamp="1582956200871">
+    <state width="1354" height="247" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1583607958280" />
+    <state width="1354" height="247" key="GridCell.Tab.0.left" timestamp="1583607958280">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1354" height="260" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200871" />
-    <state width="1354" height="260" key="GridCell.Tab.0.right" timestamp="1582956200872">
+    <state width="1354" height="247" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1583607958280" />
+    <state width="1354" height="247" key="GridCell.Tab.0.right" timestamp="1583607958280">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1354" height="260" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582956200872" />
+    <state width="1354" height="247" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1583607958280" />
     <state width="1354" height="321" key="GridCell.Tab.1.bottom" timestamp="1576047404256">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -191,10 +196,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="188" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1575959145677" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582955455010">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583512111136">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1582955455010" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583512111136" />
     <state x="302" y="155" width="1372" height="796" key="new project wizard" timestamp="1577567047087">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

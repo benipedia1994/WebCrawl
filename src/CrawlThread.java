@@ -3,12 +3,14 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 class CrawlThread implements Runnable {
     Queue<String> toSearch;
@@ -18,11 +20,13 @@ class CrawlThread implements Runnable {
     PreparedStatement stmt;
     int threadNumber;
     Object lock1;
+    JLabel numberCrawledText;
+    AtomicBoolean stopCrawling;
 
 
 
     public CrawlThread(Queue<String> toSearch, HashSet<String> searched, Connection conn, PreparedStatement stmt, int threadNumber,
-                       HashSet<String> toSearchHash,Object lock1) {
+                       HashSet<String> toSearchHash, Object lock1, AtomicBoolean stopCrawling, JLabel numberCrawledText) {
         this.toSearch = toSearch;
         this.searched = searched;
         this.conn = conn;
@@ -30,7 +34,8 @@ class CrawlThread implements Runnable {
         this.threadNumber = threadNumber;
         this.toSearchHash = toSearchHash;
         this.lock1=lock1;
-
+        this.stopCrawling=stopCrawling;
+        this.numberCrawledText=numberCrawledText;
     }
 
     @Override
@@ -41,7 +46,7 @@ class CrawlThread implements Runnable {
 
         System.out.println("Thread " +threadNumber+ " run started");
 
-        while (searched.size() < 10000) {
+        while (searched.size() < 10000&&!stopCrawling.get()) {
             synchronized(lock1){
                 while(toSearch.isEmpty()) {
                     try {
@@ -60,12 +65,17 @@ class CrawlThread implements Runnable {
                     Document doc = Jsoup.connect(current).get();
                     Elements links = doc.select("a");
 
-                        System.out.println("before getlinks");
+                        //System.out.println("before getlinks");
                         getLinks(links, doc, current);
-                        System.out.println("after getlinks");
+                        //System.out.println("after getlinks");
 
                     System.out.println(searched.size());
-                    System.out.println("Thread " +threadNumber);
+                    System.out.println(stopCrawling);
+                    if(searched.size()%100==0){
+                        numberCrawledText.setText("Pages crawled: "+searched.size());
+                    }
+
+                    //System.out.println("Thread " +threadNumber);
 
                 } catch (java.io.IOException | IllegalArgumentException e) {
                     System.out.println(e.getMessage());
@@ -93,6 +103,7 @@ private void getLinks(Elements links, Document doc, String current) {
             }
 
             linksSerial.append(newURL + ",");
+
             searched.add(current);
         }
         lock1.notifyAll();
